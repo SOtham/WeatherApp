@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type = "text/javascript" src = "index.js"></script>
+    <title>Weather</title>
+</head>
+
+<body>
+
+    <section class  = "heading">
+        <div class = "input">
+            <h1>Weather App</h1>
+            <form id = "in">
+                <input type="text" id = "input" placeholder="Search for a city">
+                <button type = button onclick="weather()">Submit</button>
+            </form>
+        </div>
+        <span id = "error" class = "errorMsg" text = ""></span>
+    </section>
+
+    <section class = "listSection">
+        <ul class = "cities" id = "list"></ul>
+        </section>
+</body>
+</html>

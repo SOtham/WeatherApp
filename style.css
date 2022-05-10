@@ -1,0 +1,152 @@
+:root{
+    --bg_main: #15133C;
+    --text_light:#F1EEE9;
+    --text_med: #73777B;
+    --orange: #EC994B;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+a {
+    color:inherit;
+    text-decoration:none;
+}
+button{
+    cursor:pointer;
+}
+input{
+    -webkit-appearance: none;
+}
+button,
+input{
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ul{
+    list-style:none;
+}
+body{
+    font: url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+    background: var(--bg_main);
+    color: var(--text_med); 
+    padding: 50px;
+}
+/*-----------------------------------------------------------*/
+.heading{
+    color: var(--text_light);
+    text-align: center;
+}
+.input{
+    font-weight: bold;
+    font-size: 3em;
+    padding: 0 0 30px 0;
+}
+.input form input{
+    font-size: .5em;
+}
+.input form input::placeholder{
+    color: var(--text_med);
+}
+.input form button{
+    font-size: .5em;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: var(--bg_main);
+    transition: background .1s ease-in-out;
+}
+.heading form button:hover{
+    background: var(--orange);
+}
+.heading span{
+    position:relative;
+    font-size: 1em;
+    bottom: -40px;
+    top:-20px;
+    left: 0;
+    max-width: 450px;
+    min-height: 1000px;
+}
+/*-------------------------------------------------------------------*/
+.listSection{
+    margin: 50px 0 20px;
+}
+.cities{
+    display:grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.city{
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: var(--text_light);
+    color: var(--text_dark);
+}
+.city::after{
+    content: ’’;
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    bottom: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 20px;
+    background: var(--text_light)
+}
+.listSection figcaption{
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.city sup{
+    font-size: .75em;
+}
+.city-name sup{
+    padding: 0.2em 1em;
+    border-radius: 30px;
+    color: var(--text_light);
+    background: orange;
+    
+}
+.city-temp{
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text_dark);
+}
+.city-icon{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+/*-------------------------------------*/
+
+@media screen and (max-width: 1000px){
+    .listSection.cities{
+        grid-template-columns: repeat(3 1fr);
+    }
+}
+@media screen and (max-width: 750px){
+    .listSection.cities{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 500x){
+    .listSection.cities{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
