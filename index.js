@@ -45,7 +45,8 @@ function weather(){
             country = obj.sys.country
             temp = obj.main.temp
             description = obj.weather[0].description
-            const icon = "http://openweathermap.org/img/w/01d.png"
+            getIcon = obj.weather[0].icon
+            const icon = "http://openweathermap.org/img/w/"+getIcon+".png"
 
             const li = document.createElement("li")
             li.classList.add("city")
