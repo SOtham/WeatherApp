@@ -47,7 +47,6 @@ function weather(){
             description = obj.weather[0].description
             getIcon = obj.weather[0].icon
             const icon = "http://openweathermap.org/img/w/"+getIcon+".png"
-
             const li = document.createElement("li")
             li.classList.add("city")
 
